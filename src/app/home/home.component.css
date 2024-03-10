@@ -1,0 +1,14 @@
+/* #myVideo {
+    position: fixed;
+     right: 50px;
+     bottom: 50px; 
+     min-width: 100%;
+     min-height: 50%;
+   }*/
+
+#myVideo {
+  position: fixed;
+
+  min-width: 100%;
+  min-height: 100%;
+}

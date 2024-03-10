@@ -1,0 +1,90 @@
+<html>
+<head>
+
+
+</head>
+
+
+
+<body >
+
+    <div id = v1 >
+        <video autoplay muted loop id="myVideo">
+            <source src="../../assets/v1.mp4" type="video/mp4">
+          </video>  
+        </div>
+         
+
+    </body>
+
+<br><br><br><br><br><br><br>
+<div class="card loginForm" id="d3" style="width:400px">
+    <form (ngSubmit)="submitForm()" novalidate [formGroup]="userForm">
+        <div class="card-body ">
+            <img src="../../assets/111.png " height="60px" width="100px" class="webLogo" alt="Logo">
+            <div class="my-4 text-center"><small>Don't have an account ? <a href="/sign-up">create one</a></small></div>
+            <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Email address/Mobile</label>
+                <input type="email" formControlName="userId" class="form-control" id="exampleInputEmail1">
+                <div *ngIf="submitted && f['userId'].errors" class="invalid-feedback">
+                    <div *ngIf="f['userId'].errors['required']">Email or Mobile no. is required</div>
+                </div>
+            </div>
+            <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label">Password</label>
+                <input type="password" [ngClass]="{ 'is-invalid': submitted && f['userPassword'].errors }"
+                    formControlName="userPassword" class="form-control" id="exampleInputPassword1">
+                <div *ngIf="submitted && f['userPassword'].errors" class="invalid-feedback"> 
+                  <div *ngIf="f['userPassword'].errors['required']">Password is required</div>
+                    <div *ngIf="f['userPassword'].errors['minlength']">Password must be at least 8 characters long</div>
+                    <div *ngIf="f['userPassword'].errors['pattern']">Password must contain at least one uppercase
+                        letter,
+                        one lowercase letter, one number, and one special character</div> 
+                </div>
+
+            </div>
+
+            <div class="frame text-center">
+                <button type="submit" class="btn btn-primary">Login</button>&nbsp; &nbsp;
+                <button type="button" (click)="onReset()" class="btn btn-warning">Cancel</button>
+            </div>
+            <div class="form-group text-center my-4">
+                <a href="#" class="forgot-link" routerLink="/forget-password">Forgot Password?</a>
+            </div>
+             <p class="message">Not registered? <a href="#" routerLink="/sign-up">Create an account</a></p>
+
+
+        </div>
+    </form>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</html>
+
+<!-- 
+
+ -->

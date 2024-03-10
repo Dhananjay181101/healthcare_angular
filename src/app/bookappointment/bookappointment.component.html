@@ -1,0 +1,163 @@
+<html>
+  <head>
+    <style>
+      body {
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <img
+        src="../../assets/Blue and Yellow Clean and Bold Vaccine Scheduling General Health Banner.png"
+        width="100%"
+        height="500px"
+      />
+    </div>
+
+    <br /><br />
+
+    <div
+      class="container"
+      style="background: rgba(112, 246, 114, 0.5); width: 80%"
+    >
+      <div class="row">
+        <div class="col-sm-4" id="f1">
+          <fieldset
+            style="
+              background-color: aliceblue;
+              width: 500px;
+              margin-left: 230px;
+              padding: 30px;
+            "
+          >
+            <div class="col-sm=4">
+              <legend>
+                <h1 style="text-align: center">booking Appointment</h1>
+              </legend>
+              <br /><br />
+              <form #myform="ngForm" (ngSubmit)="addUser(myform)">
+                <label> person user id(email) &nbsp;:&nbsp;</label>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <input type="text" name="pid" ngModel />
+                <br /><br />
+                <label>persons name &nbsp;:&nbsp;</label>
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                <input type="text" name="pname" ngModel />
+                <br /><br />
+                <label>contact &nbsp;:&nbsp;</label>
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                <input type="text" name="contact" ngModel />
+
+                <br /><br />
+                <label>Adress &nbsp;:&nbsp;</label>
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                <input type="text" name="adress" ngModel />
+
+                <br /><br />
+                <label>age &nbsp;:&nbsp;</label>
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                <input type="number" name="age" ngModel />
+
+                <br /><br />
+                <label>Appointment Type &nbsp;:&nbsp;</label>
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                <input type="text" name="atype" ngModel />
+
+                <br /><br />
+                <label>date &nbsp;:&nbsp;</label>
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                <input type="date" name="adate" ngModel />
+
+                <br /><br />
+
+                <input
+                  type="submit"
+                  value="submit button"
+                  class="btn btn-danger"
+                />
+
+                <br /><br /><br />
+              </form>
+            </div>
+          </fieldset>
+        </div>
+      </div>
+    </div>
+    <br /><br />
+    <a href="payment" style="margin-left: 500px"
+      ><input type="button" class="btn btn-success" value="payment"
+    /></a>
+
+    <fieldset>
+      <br />
+      <br /><br /><br /><br /><br /><br /><br /><br />
+      <input
+        type="button"
+        class="btn btn-danger"
+        (click)="getAll()"
+        value="bookings"
+      />
+      <br /><br />
+      <mark>{{ err }}</mark>
+
+      <table *ngIf="status" style="width: 100%; background-color: aliceblue">
+        <tr>
+          <th>persone id</th>
+          <th>person name</th>
+          <th>contact</th>
+          <th>adress</th>
+          <th>age</th>
+          <th>type</th>
+          <th>date</th>
+        </tr>
+        <tr *ngFor="let e of resList1">
+          <td>{{ e.pid }}</td>
+          <td>{{ e.pname }}</td>
+          <td>{{ e.contact }}</td>
+          <td>{{ e.adress }}</td>
+          <td>{{ e.age }}</td>
+          <td>{{ e.atype }}</td>
+          <td>{{ e.adate }}</td>
+        </tr>
+      </table>
+    </fieldset>
+
+    <fieldset>
+      <br /><br />
+
+      <form #myform="ngForm" (ngSubmit)="getSpecific(myform)">
+        <label>enter user id &nbsp;:&nbsp;</label>
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        <input type="text" name="pid" ngModel />
+        <br /><br />
+        <input type="submit" class="btn btn-success" value="Your Cart" />
+        <br /><br />
+        <mark>{{ err }}</mark>
+      </form>
+
+      <table *ngIf="status" style="width: 100%; background-color: aliceblue">
+        <tr>
+          <th>persone id</th>
+          <th>person name</th>
+          <th>contact</th>
+          <th>adress</th>
+          <th>age</th>
+          <th>type</th>
+          <th>date</th>
+        </tr>
+        <tr *ngFor="let e of resList2">
+          <td>{{ e.pid }}</td>
+          <td>{{ e.pname }}</td>
+          <td>{{ e.contact }}</td>
+          <td>{{ e.adress }}</td>
+          <td>{{ e.age }}</td>
+          <td>{{ e.atype }}</td>
+          <td>{{ e.adate }}</td>
+        </tr>
+      </table>
+    </fieldset>
+  </body>
+</html>

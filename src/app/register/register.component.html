@@ -1,0 +1,242 @@
+<html>
+<head>
+    <style>
+        body {
+          
+          background-repeat: no-repeat;
+          background-attachment: fixed;
+          background-size: cover;
+          
+        }
+        </style>
+</head>
+<body style="background-image: url('../../assets/doc1.jpg.jpg');" >
+    <br><br><br><br><br>
+
+    <div class="container" style="background: rgba(241, 126, 25, 0.5);">
+<div class="row">
+<div class="col-sm-4">
+   
+    <fieldset style="background-color: rgb(254, 239, 242); margin-top: 20px;">
+       
+        <div class="col-sm=4">  
+            <br><br>
+         <legend> <h1>registration form</h1></legend>
+         <br><br>
+      <form #myform="ngForm" (ngSubmit)="addUser(myform)">
+          <label> userId&nbsp;:&nbsp;</label>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <input type="number" name="userId" ngModel >
+          <br><br>
+          <label>userName &nbsp;:&nbsp;</label>
+          &nbsp;&nbsp;&nbsp;&nbsp;
+      <input type="text" name="userName" ngModel>
+       <br><br>
+      <label>userEmail &nbsp;:&nbsp;</label>
+       &nbsp;&nbsp;&nbsp;&nbsp;
+      <input type="text" name="userEmail" ngModel>
+      
+      <br><br>
+      <label>userPassword &nbsp;:&nbsp;</label>
+      
+      <input type="text" name="userPassword" ngModel>
+      <br><br>
+      <label>userRole &nbsp;:&nbsp;</label>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <input type="text" name="userRole" ngModel>
+      <br><br>
+      <input type="submit" value ="submit button" class="btn btn-danger">
+      
+      
+      
+      <br><br><br>
+      
+      
+      
+      
+      </form>
+      <!-- <h1><pre>{{myform.value|json}}</pre></h1> -->
+  </div>
+      </fieldset>
+</div>
+<div class="col-sm-8">
+    <video autoplay muted loop id="myVideo" style="height:700px; width: 700px;">
+    <source src="../../assets/laptop_-_61037 (540p).mp4" type="video/mp4" >
+  </video> 
+</div>
+
+</div>
+    </div>
+<br>
+
+<fieldset>
+
+    
+    
+        <input type="button"  class="btn btn-danger"  (click)="getAll()"  value="Registration"/>
+        <br/><br/>
+        <mark>{{err}}</mark>
+    
+        <table *ngIf="status" style="width: 100%; background-color: aliceblue;">
+            <tr>
+                <th>user id</th>
+                <th>userName</th>
+                <th>userEmail</th>
+                <th>userPassword</th>
+                <th>userRole</th>
+            </tr>
+            <tr *ngFor="let e of resList">
+                <td>{{e.userId}}</td>
+                <td>{{e.userName}}</td>
+                <td>{{e.userEmail}}</td>
+                <td>{{e.userPassword}}</td>
+                <td>{{e.userRole}}</td>
+                
+    
+    
+    
+    
+            </tr>
+        </table>
+    
+    </fieldset>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 
+
+
+
+
+    <div id =f1>
+       
+    <fieldset style="background-color: aliceblue;">
+       
+      <div class="col-sm=4">  
+
+       <legend> <h1>registration form</h1></legend>
+    <form #myform="ngForm" (ngSubmit)="showData(myform)">
+        <label> userId&nbsp;:&nbsp;</label>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <input type="number" name="userId" ngModel >
+        <br><br>
+        <label>userName &nbsp;:&nbsp;</label>
+        &nbsp;&nbsp;&nbsp;&nbsp;
+    <input type="text" name="userName" ngModel>
+     <br><br>
+    <label>userEmail &nbsp;:&nbsp;</label>
+     &nbsp;&nbsp;&nbsp;&nbsp;
+    <input type="text" name="userEmail" ngModel>
+    
+    <br><br>
+    <label>userPassword &nbsp;:&nbsp;</label>
+    
+    <input type="text" name="userPassword" ngModel>
+    <br><br>
+    <label>userRole &nbsp;:&nbsp;</label>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <input type="text" name="userRole" ngModel>
+    <br><br>
+    <input type="submit" value ="submit button" class="btn btn-danger">
+    
+    
+    
+    
+    
+    
+    
+    
+    </form>
+    <h1><pre>{{myform.value|json}}</pre></h1>
+</div>
+    </fieldset>
+</div>
+
+
+
+<br><br><br>
+ -->
+</body>
+</html>
+
+
+
+
+

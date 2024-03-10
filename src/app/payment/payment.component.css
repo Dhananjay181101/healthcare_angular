@@ -1,0 +1,21 @@
+#d1{
+
+    margin-left: 150px;
+    text-align: center;
+    margin-top: 45px;
+}
+body {
+    
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+  }
+  
+  #myVideo {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+  }
+  
